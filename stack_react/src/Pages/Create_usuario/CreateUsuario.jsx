@@ -1,9 +1,10 @@
 import '../../Pages/Create_usuario/CrearUsuario.css'
+import Title from '../../Components/Titles/Titles';
 
 function CrearUsuario() {
     return (
       <div>
-        <h1>CrearUsuario</h1>
+        <Title titulos="Notas"/>
       </div>
     );
   }
