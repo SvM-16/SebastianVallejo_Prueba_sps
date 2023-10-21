@@ -1,32 +1,21 @@
 import Nota from '../models/notasModels.js'
 
-export const getNotas = async(req,res)=>{
-    try {
-        const notas = await Nota.find()
-        res.json( notas )
-
-    } catch (error) {
-        console.log(error)
-        res.status(500).json("Error en encontar todas las notas");
-    }
-}
-
 export const getNota = async (req, res) => {
     try {
-        const notas = await Nota.find();
+        const nota = await Nota.find();
         const today = new Date(); // Fecha actual
-        const notasWithTimeElapsed = notas.map((nota) => {
-            const createdDate = new Date(nota.date);
+        const notasWithTimeElapsed = nota.map((notas) => {
+            const createdDate = new Date(notas.date);
             const timeElapsed = today - createdDate;
             const minutes = Math.floor(timeElapsed / (1000 * 60));
             if (minutes < 60) {
-                return { ...nota._doc, timeElapsed: `${minutes} minutos` };
+                return { ...notas._doc, timeElapsed: `${minutes} minutos` };
             } else if (minutes < 1440) {
                 const hours = Math.floor(minutes / 60);
-                return { ...nota._doc, timeElapsed: `${hours} horas` };
+                return { ...notas._doc, timeElapsed: `${hours} horas` };
             } else {
                 const days = Math.floor(minutes / 1440);
-                return { ...nota._doc, timeElapsed: `${days} días` };
+                return { ...notas._doc, timeElapsed: `${days} días` };
             }
         });
         return res.json(notasWithTimeElapsed);
@@ -38,11 +27,11 @@ export const getNota = async (req, res) => {
 
 export const createNota = async(req,res) => {
     try {
-        const {username, title, description, date} = req.body
+        const {name, title, description, date} = req.body
 
         const newNota = new Nota ({
             title,
-            username,
+            name,
             description,
             date
         })

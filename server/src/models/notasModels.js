@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const notasSchema = new mongoose.Schema({
-    username : {
+    name : {
         type: String,
         required: true,
         trim: true

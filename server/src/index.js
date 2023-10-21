@@ -3,4 +3,4 @@ import { conectarDB } from "./db.js";
 
 conectarDB();
 
-app.listen(5000, () => console.log(`iniciando server`));
+app.listen(5001, () => console.log(`iniciando server`));
