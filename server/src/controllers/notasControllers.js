@@ -64,7 +64,7 @@ export const updateNota = async (req,res) => {
 export const deleteNota = async (req, res) => {
     try {
         const nota = await Nota.findByIdAndDelete(req.params.id);
-        if (!nota) return res.status(404).json({ message: 'Nota no encontrada'});
+        if (!nota) return res.status(404).json({ message: 'Nota eliminada'});
         res.status(200).json('Nota eliminada')
     } catch (error) {
         console.log(error)
