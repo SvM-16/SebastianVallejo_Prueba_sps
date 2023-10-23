@@ -27,24 +27,23 @@ export const getNota = async (req, res) => {
 
 export const createNota = async(req,res) => {
     try {
-        const {name, title, description, date} = req.body
+        const { nombre, titulo, informacion, date } = req.body;
 
-        const newNota = new Nota ({
-            title,
-            name,
-            description,
+        const newNota = new Nota({
+            nombre,
+            titulo,
+            informacion,
             date
-        })
+          });
 
-        const savedNote = await newNota.save()
-        res.json( savedNote )
+        const savedNota = await newNota.save();
+          res.json(savedNota);
 
-    } catch (error) {
+        } catch (error) {
         console.log(error);
         res.status(500).json("Error al crear la nota");
-        
-    }
-}
+        }
+      };
 
 export const updateNota = async (req,res) => {
     try {

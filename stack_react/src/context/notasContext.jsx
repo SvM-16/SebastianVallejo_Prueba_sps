@@ -1,17 +1,17 @@
 import {createContext, useContext, useState } from 'react'
 import {getNotaRequest, addNotaRequest, updateNotaRequest, deleteNotaRequest} from '../api/notas.js'
 
-const notaContext = createContext();
+const NotaContext = createContext();
 
 export const useNotas = () => {
-    const context = useContext(notaContext);
+    const context = useContext(NotaContext);
     if(!context) {
         throw new Error('useNotes must be used within a ProductoProvider')
     }
     return context
 }
 
-export function notaProvier({ children }) {
+export function NotaProvier({ children }) {
     const [notas, setNotas] = useState([]);
 
     const getNotas = async () =>{
@@ -23,10 +23,10 @@ export function notaProvier({ children }) {
             console.log(error)
         }
     }
-    const addNotas = async (notas) => {
+    const addNotas = async (nota) => {
         try {
             const res = await addNotaRequest(notas);
-            setNotas([...notas,res.data]),
+            setNotas([...nota,res.data]),
             console.log(res)
         } catch (error) {
             console.log(error)
@@ -54,7 +54,7 @@ export function notaProvier({ children }) {
     }
     
     return (
-        <notaContext.Provider value={{
+        <NotaContext.Provider value={{
             notas,
             getNotas,
             addNotas,
@@ -62,7 +62,7 @@ export function notaProvier({ children }) {
             deleteNotas
         }}>
             {children}
-        </notaContext.Provider>
+        </NotaContext.Provider>
     )    
 }
 

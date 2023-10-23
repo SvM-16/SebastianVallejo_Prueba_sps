@@ -20,7 +20,7 @@ function CrearUsuario() {
       <div className='general'> 
         <div className='formulario_users'>
           <form className='formulario' onSubmit={onSubmit}>
-                <h2 className='crear'>Crear Usuario</h2>
+                <h1 className='crear'>Crear Usuario</h1>
                 <input className="input" type="text" name="" id="" placeholder="User" {...register("username")}/>
                 <button className='btn'>save</button>
           </form>
