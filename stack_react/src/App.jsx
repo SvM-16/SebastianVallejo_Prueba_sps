@@ -2,9 +2,9 @@ import {BrowserRouter, useRoutes} from 'react-router-dom'
 import './App.css'
 
 import Navbar from './Components/Navbar/Navbar'
-import Notas from './Pages/Notas/Notas'
-import CrearNota from './Pages/Crear_nota/CrearNota'
-import CrearUsuario from './Pages/Create_usuario/CreateUsuario'
+import Notas from '../src/Pages/Notas/Notas.jsx'
+import CrearNota from '../src/Pages/Crear_nota/CrearNota.jsx'
+import CrearUsuario from '../src/Pages/Create_usuario/CreateUsuario.jsx'
 
 function Router() {
   let router = useRoutes([
