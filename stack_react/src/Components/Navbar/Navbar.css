@@ -1,17 +1,19 @@
 .Container{
     width: 100%;
     height: 80px;
-    background-color: grey;
+    background-color:#363b3f;
 }
 
 .Titulo{
     font-size: 30px;
     padding: 15px;
+    color:white
 }
 
 .NavLink{
     padding-left: 700px;
     font-size: 15px;
+    color:white
 }
 
 .NavLink li{

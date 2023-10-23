@@ -18,11 +18,23 @@ function CrearUsuario() {
 
     return (
       <div className='general'> 
-        <div>
-          <form action="">
-
+        <div className='formulario_users'>
+          <form className='formulario' onSubmit={onSubmit}>
+                <h2 className='crear'>Crear Usuario</h2>
+                <input className="input" type="text" name="" id="" placeholder="User" {...register("username")}/>
+                <button className='btn'>save</button>
           </form>
         </div>
+
+        <div className='lista_users'>
+          {users.map((user)=>(
+            <div className='users' key={user._id}>
+              <span>{user.username}</span>
+            </div>
+          ))
+          }
+        </div>
+
       </div>
     );
   }
