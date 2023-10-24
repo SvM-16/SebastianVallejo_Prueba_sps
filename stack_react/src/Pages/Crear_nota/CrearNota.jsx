@@ -38,11 +38,13 @@ function CrearNota() {
             <h1 className='crear'>
               {isEditing ? "Crear Nota" : "Editar Nota"}
             </h1>
-            <input className="input" type="text" name="" id="" placeholder="User" {...register("nombre")} defaultValue={notaToEdit?.nombre || ""}/>
-            <input className="input" type="text" name="" id="" placeholder="Titulo" {...register("titulo")} defaultValue={notaToEdit?.titulo || ""}/>
-            <textarea className="input" rows="4" cols="90" name="" id="" placeholder="Contenido" {...register("informacion")} defaultValue={notaToEdit?.informacion || ""}/>
-            <input className="input" type="date" name="" id="" placeholder="Fecha" {...register("date")} defaultValue={notaToEdit?.date || ""}/>
-            <button className='btn'>save</button>
+            <input className="input1" type="text" name="" id="" placeholder="User" {...register("nombre")} defaultValue={notaToEdit?.nombre || ""}/>
+            <input className="input1" type="text" name="" id="" placeholder="Titulo" {...register("titulo")} defaultValue={notaToEdit?.titulo || ""}/>
+            <textarea className="input1" rows="4" cols="90" name="" id="" placeholder="Contenido" {...register("informacion")} defaultValue={notaToEdit?.informacion || ""}/>
+            <div className='input_btn'>
+              <input className="input2" type="date" name="" id="" placeholder="Fecha" {...register("date")} defaultValue={notaToEdit?.date || ""}/>
+              <button className='btn1'>save</button>
+            </div>
           </form>
         </div>
       </div>

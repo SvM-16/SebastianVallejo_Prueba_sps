@@ -1,0 +1,69 @@
+.crear{
+    display: flex;
+    justify-content: center;
+}
+
+.formularioNotas{
+    width: 370px;
+    height: 360px;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.input1{
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input1:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+}
+
+.input_btn{
+    display: flex;
+    flex-direction: column;
+}
+
+.input2{
+    margin-top: 8px;
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input2:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+}
+
+.btn1{
+    margin-top: 10px;
+    width: 50px;
+    height: 30px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn1:hover{
+    background-color: black;
+    color: white;
+}
