@@ -23,10 +23,9 @@ export function NotaProvier({ children }) {
             console.log(error)
         }
     }
-    const addNotas = async (nota) => {
+    const addNotas = async (notas) => {
         try {
             const res = await addNotaRequest(notas);
-            setNotas([...nota,res.data]),
             console.log(res)
         } catch (error) {
             console.log(error)
